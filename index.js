@@ -1,9 +1,12 @@
 const express = require('express');
 const morgan = require("morgan");
+const cors = require("cors");
 const { createProxyMiddleware } = require('http-proxy-middleware');
 
 // Create Express Server
 const app = express();
+
+app.use(cors());
 
 // Configuration
 const PORT = 3000;
